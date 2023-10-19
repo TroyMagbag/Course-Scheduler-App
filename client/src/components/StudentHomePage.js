@@ -8,8 +8,8 @@ class StudentHomePage extends React.Component {
     }
 
     
-    handleChange = (event) => {
-        this.setState({major: event.target,value});
+    handleChange =  (event) => {
+        this.setState({major: event.target.value});
         const url = '/rounds/' + this.props.userObj.id;
         const res = await fetch(url, {
             headers: {
